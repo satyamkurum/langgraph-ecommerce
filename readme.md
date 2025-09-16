@@ -3,17 +3,17 @@
 This project implements a **conversational customer support assistant** for an e-commerce platform using [LangGraph], [LangChain], [Google Gemini API], and [Streamlit].
 
 The assistant can:
-- Answer **FAQs** (e.g., return policy, shipping times, warranty).
+- Answer **FAQs** (e.g. return policy, shipping times, warranty).
 - Track **orders by ID**.
 - Maintain **conversation history** with persistence.
 
 ---
 
 ## Features
-- **LangGraph Orchestration**: Graph-based control flow for multi-turn conversations.
+- **LangGraph Orchestration**: Graph-based control flow for conversations.
 - **Persistence**: Conversations persist across sessions using SQLite checkpointer.
 - **Tool Integration**: LLM can call tools (FAQ, order tracking, human escalation).
-- **Structured Parsing**: Order IDs and other fields are parsed with regex + Pydantic or Gemini structured output.
+- **Structured Parsing**: Order IDs and other fields are parsed with regex + Pydantic output.
 - **Streamlit Frontend**: Simple web chat interface connected to FastAPI backend.
 
 ---
@@ -68,6 +68,7 @@ streamlit run streamlit_app.py
 ```bash
 python -m pytest test/quick_test.py -v
 ```
+
 
 
 
